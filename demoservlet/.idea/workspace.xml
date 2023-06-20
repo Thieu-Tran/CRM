@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa60c942-99ef-40b8-884a-f2c4f44669a9" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2OYSsclba0YZ37qV83CoAFjFHwr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/UAH/Desktop/DEV/java_21/git_project/CRM/demoservlet",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\UAH\Desktop\DEV\java_21\java_21\demoservlet\src\main\webapp" />
+      <recent name="C:\Users\UAH\Desktop\DEV\java_21\java_21\demoservlet\src\main\webapp\js" />
+      <recent name="C:\Users\UAH\Desktop\DEV\java_21\java_21\demoservlet\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\UAH\Desktop\DEV\java_21\demoservlet\src" />
+      <recent name="C:\Users\UAH\Desktop\DEV\java_21\java_21\demoservlet\src\main\webapp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller" />
+      <recent name="service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Smart Tomcat.tomcat9">
+    <configuration name="All in demoservlet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demoservlet" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="CRM" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="CRM" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat: demoservlet" type="com.poratu.idea.plugins.tomcat" temporary="true">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="contextPath" value="/demoservlet" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.73" />
+          <option name="path" value="$USER_HOME$/Downloads/apache-tomcat-9.0.73" />
+          <option name="version" value="9.0.73.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tomcat9" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="contextPath" value="/demoservlet" />
+      <option name="docBase" value="C:\Users\UAH\Desktop\DEV\java_21\git_project\CRM\demoservlet\src\main\webapp\" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.73" />
+          <option name="path" value="$USER_HOME$/Downloads/apache-tomcat-9.0.73" />
+          <option name="version" value="9.0.73.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="demoservlet" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.All in demoservlet" />
+      <item itemvalue="Smart Tomcat.tomcat9" />
+      <item itemvalue="Smart Tomcat.Tomcat: demoservlet" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Smart Tomcat.Tomcat: demoservlet" />
+        <item itemvalue="JUnit.All in demoservlet" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa60c942-99ef-40b8-884a-f2c4f44669a9" name="Changes" comment="" />
+      <created>1681736230416</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681736230416</updated>
+      <workItem from="1681736231548" duration="361000" />
+      <workItem from="1681736603417" duration="2351000" />
+      <workItem from="1681738968009" duration="1425000" />
+      <workItem from="1681804150110" duration="5540000" />
+      <workItem from="1681817545796" duration="5321000" />
+      <workItem from="1681957010578" duration="4922000" />
+      <workItem from="1681990387343" duration="8037000" />
+      <workItem from="1682166931695" duration="141000" />
+      <workItem from="1682422348034" duration="9602000" />
+      <workItem from="1682494374952" duration="110000" />
+      <workItem from="1682994385635" duration="5438000" />
+      <workItem from="1683012017468" duration="2570000" />
+      <workItem from="1683074879736" duration="3275000" />
+      <workItem from="1683113736813" duration="1743000" />
+      <workItem from="1683115533362" duration="8494000" />
+      <workItem from="1683128770820" duration="1717000" />
+      <workItem from="1683199844609" duration="9626000" />
+      <workItem from="1683296859354" duration="1401000" />
+      <workItem from="1683375953627" duration="1906000" />
+      <workItem from="1683447770501" duration="607000" />
+      <workItem from="1683512647732" duration="9342000" />
+      <workItem from="1683550742969" duration="8838000" />
+      <workItem from="1683594269854" duration="6507000" />
+      <workItem from="1683621711081" duration="1538000" />
+      <workItem from="1683631638145" duration="8827000" />
+      <workItem from="1683722122377" duration="6628000" />
+      <workItem from="1683793457359" duration="2847000" />
+      <workItem from="1683808005948" duration="92000" />
+      <workItem from="1683984327278" duration="510000" />
+      <workItem from="1683995227844" duration="2406000" />
+      <workItem from="1684078910773" duration="538000" />
+      <workItem from="1684079488951" duration="197000" />
+      <workItem from="1684079718591" duration="2807000" />
+      <workItem from="1684082613698" duration="345000" />
+      <workItem from="1684209697303" duration="732000" />
+      <workItem from="1684236067541" duration="318000" />
+      <workItem from="1684501902694" duration="139000" />
+      <workItem from="1684503712382" duration="590000" />
+      <workItem from="1684634490133" duration="803000" />
+      <workItem from="1684653778104" duration="4543000" />
+      <workItem from="1684680110985" duration="4125000" />
+      <workItem from="1684762148992" duration="4280000" />
+      <workItem from="1684832722166" duration="63000" />
+      <workItem from="1685174930950" duration="1824000" />
+      <workItem from="1685406872260" duration="239000" />
+      <workItem from="1685407125702" duration="7810000" />
+      <workItem from="1685496488622" duration="4276000" />
+      <workItem from="1685501377585" duration="2778000" />
+      <workItem from="1685517874869" duration="13908000" />
+      <workItem from="1685710729915" duration="5650000" />
+      <workItem from="1685757111513" duration="7078000" />
+      <workItem from="1685771156340" duration="8594000" />
+      <workItem from="1685797132882" duration="8655000" />
+      <workItem from="1685842668984" duration="13903000" />
+      <workItem from="1685890154865" duration="5867000" />
+      <workItem from="1686050212423" duration="7000" />
+      <workItem from="1686894754850" duration="775000" />
+      <workItem from="1686895540685" duration="10982000" />
+      <workItem from="1686973773868" duration="19000" />
+      <workItem from="1686974088932" duration="34000" />
+      <workItem from="1687229675779" duration="34000" />
+      <workItem from="1687229740937" duration="36000" />
+      <workItem from="1687230390726" duration="281000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
