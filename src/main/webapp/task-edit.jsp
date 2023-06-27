@@ -47,10 +47,10 @@
             <div class="top-left-part">
                 <a class="logo" href="<c:url value="/"/>">
                     <b>
-                        <img src="plugins/images/pixeladmin-logo.png" alt="home" />
+                        <img src="<c:url value="/plugins/images/pixeladmin-logo.png"/>" alt="home" />
                     </b>
                     <span class="hidden-xs">
-                            <img src="plugins/images/pixeladmin-text.png" alt="home" />
+                            <img src="<c:url value="/plugins/images/pixeladmin-text.png"/>" alt="home" />
                         </span>
                 </a>
             </div>
@@ -68,7 +68,7 @@
                 <li>
                     <div class="dropdown">
                         <a class="profile-pic dropdown-toggle" data-toggle="dropdown" href="#">
-                            <img src="plugins/images/users/varun.jpg" alt="user-img" width="36"
+                            <img src="<c:url value="/plugins/images/users/varun.jpg"/>" alt="user-img" width="36"
                                  class="img-circle" />
                             <b class="hidden-xs">Cybersoft</b>
                         </a>
@@ -76,7 +76,7 @@
                             <li><a href="<c:url value="/user/profile"/>">Thông tin cá nhân</a></li>
                             <li><a href="#">Thống kê công việc</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Đăng xuất</a></li>
+                            <li><a href="<c:url value="/logout"/>">Đăng xuất</a></li>
                         </ul>
                     </div>
                 </li>
@@ -115,7 +115,7 @@
                                                                  aria-hidden="true"></i><span class="hide-menu">Blank Page</span></a>
                 </li>
                 <li>
-                    <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw"
+                    <a href="<c:url value="/403"/>" class="waves-effect"><i class="fa fa-info-circle fa-fw"
                                                                aria-hidden="true"></i><span class="hide-menu">Error 404</span></a>
                 </li>
             </ul>
@@ -132,6 +132,15 @@
             </div>
             <!-- /.row -->
             <!-- .row -->
+
+            <!-- Khai báo biến role, isSuccess kiểm tra trả về true false để đánh giá quyền chỉnh sửa -->
+            <c:set var="role" value="${role}"/>
+            <c:set var="isSuccess" value="false"/>
+
+            <c:if test="${role=='ROLE_USER'}">
+                <c:set var="isSuccess" value="true"/>
+            </c:if>
+
             <div class="row">
                 <div class="col-md-2 col-12"></div>
                 <div class="col-md-8 col-xs-12">
@@ -142,15 +151,21 @@
                                 <label class="col-md-12">ID</label>
                                 <div class="col-md-12">
                                     <input name="taskId" type="text" placeholder="ID"
-                                           class="form-control form-control-line" value="${taskModel.getId()}">
+                                           class="form-control form-control-line" value="${taskModel.getId()}" readonly>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Dự án</label>
                                 <div class="col-md-12">
-                                    <select name="jobId" class="form-control form-control-line">
+                                    <select name="jobId" class="form-control form-control-line" >
                                         <c:forEach var="item" items="${jobList}">
-                                            <option value="${item.getId()}" ${item.getId()==taskModel.getJobId()?"selected":""}>${item.getName()}</option>
+                                            <!-- Nếu role == ROLE_USE(isSuccess = true) và không trùng với id đang select thì thêm class "disabled" -->
+                                            <option value="${item.getId()}" ${item.getId()==taskModel.getJobId()?"selected":""}
+                                                    ${item.getId()!=taskModel.getJobId()&& isSuccess?"disabled":""} >
+
+                                                    ${item.getName()}
+
+                                            </option>
                                         </c:forEach>
                                     </select>
                                 </div>
@@ -159,7 +174,7 @@
                                 <label class="col-md-12">Tên công việc</label>
                                 <div class="col-md-12">
                                     <input name="taskName" type="text" placeholder="Tên công việc"
-                                           class="form-control form-control-line" value="${taskModel.getName()}">
+                                           class="form-control form-control-line" value="${taskModel.getName()}" ${isSuccess?"readonly":""}>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -167,7 +182,13 @@
                                 <div class="col-md-12">
                                     <select name="userId" class="form-control form-control-line">
                                         <c:forEach var="item" items="${userList}">
-                                            <option value="${item.getId()}" ${item.getId()==taskModel.getUserId()?"selected":""}>${item.getFullname()}</option>
+                                            <option value="${item.getId()}" ${item.getId()==taskModel.getUserId()?"selected":""}
+                                                    ${item.getId()!=taskModel.getUserId()&&isSuccess?"disabled":""}>
+
+
+                                                    ${item.getFullname()}
+
+                                            </option>
                                         </c:forEach>
                                     </select>
                                 </div>
@@ -176,14 +197,14 @@
                                 <label class="col-md-12">Ngày bắt đầu</label>
                                 <div class="col-md-12">
                                     <input name="startDate" type="text" placeholder="yyyy/MM/dd"
-                                           class="form-control form-control-line" value="${taskModel.getStartDate()}">
+                                           class="form-control form-control-line" value="${taskModel.getStartDate()}" ${isSuccess?"readonly":""}>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Ngày kết thúc</label>
                                 <div class="col-md-12">
                                     <input name="endDate" type="text" placeholder="yyyy/MM/dd"
-                                           class="form-control form-control-line" value="${taskModel.getEndDate()}">
+                                           class="form-control form-control-line" value="${taskModel.getEndDate()}" ${isSuccess?"readonly":""}>
                                 </div>
                             </div>
                             <div class="form-group">

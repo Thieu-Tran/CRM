@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.Date;
 import java.util.List;
@@ -82,6 +83,7 @@ public class TaskController extends HttpServlet {
     }
 
     private void getTaskById(HttpServletRequest req,HttpServletResponse resp){
+
         int id = Integer.parseInt(req.getParameter("id"));
         TaskModel taskModel = taskService.getTaskById(id);
 
@@ -93,7 +95,6 @@ public class TaskController extends HttpServlet {
         req.setAttribute("jobList",jobModelList);
         req.setAttribute("userList",userModelList);
         req.setAttribute("statusList",statusModelList);
-
     }
 
     private void addTask(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException {
@@ -137,6 +138,10 @@ public class TaskController extends HttpServlet {
     }
 
     private void editTask(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        String role = (String) session.getAttribute("role");
+        req.setAttribute("role",role);
+
         String method = req.getMethod();
         getTaskById(req,resp);
 

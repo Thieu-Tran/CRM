@@ -62,9 +62,9 @@ public class LoginController extends HttpServlet {
 
             HttpSession session = req.getSession();
 
-            session.setAttribute("email",email);
-            session.setAttribute("password",password);
-            session.setAttribute("role",roleModel.getName());
+                session.setAttribute("email",email);
+                session.setAttribute("password",password);
+                session.setAttribute("role",roleModel.getName());
 
             resp.sendRedirect(contextPath);
         }else {

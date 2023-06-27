@@ -45,12 +45,12 @@
                 <i class="fa fa-bars"></i>
             </a>
             <div class="top-left-part">
-                <a class="logo" href="index.jsp">
+                <a class="logo" href="<c:url value="/"/>">
                     <b>
-                        <img src="plugins/images/pixeladmin-logo.png" alt="home" />
+                        <img src="<c:url value="/plugins/images/pixeladmin-logo.png"/>" alt="home" />
                     </b>
                     <span class="hidden-xs">
-                            <img src="plugins/images/pixeladmin-text.png" alt="home" />
+                            <img src="<c:url value="/plugins/images/pixeladmin-text.png"/>" alt="home" />
                         </span>
                 </a>
             </div>
@@ -68,7 +68,7 @@
                 <li>
                     <div class="dropdown">
                         <a class="profile-pic dropdown-toggle" data-toggle="dropdown" href="#">
-                            <img src="plugins/images/users/varun.jpg" alt="user-img" width="36"
+                            <img src="<c:url value="/plugins/images/users/varun.jpg"/>" alt="user-img" width="36"
                                  class="img-circle" />
                             <b class="hidden-xs">Cybersoft</b>
                         </a>
@@ -76,7 +76,7 @@
                             <li><a href="<c:url value="/user/profile"/>">Thông tin cá nhân</a></li>
                             <li><a href="#">Thống kê công việc</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Đăng xuất</a></li>
+                            <li><a href="<c:url value="/logout"/>">Đăng xuất</a></li>
                         </ul>
                     </div>
                 </li>
@@ -115,7 +115,7 @@
                                                                  aria-hidden="true"></i><span class="hide-menu">Blank Page</span></a>
                 </li>
                 <li>
-                    <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw"
+                    <a href="<c:url value="/403"/>" class="waves-effect"><i class="fa fa-info-circle fa-fw"
                                                                aria-hidden="true"></i><span class="hide-menu">Error 404</span></a>
                 </li>
             </ul>
@@ -138,7 +138,7 @@
                         <div class="user-bg"> <img width="100%" alt="user" src="<c:url value="/plugins/images/large/img1.jpg"/>">
                             <div class="overlay-box">
                                 <div class="user-content">
-                                    <a href="javascript:void(0)"><img src="<c:url value="/plugins/images/users/genu.jpg"/>"
+                                    <a href="javascript:void(0)"><img src="<c:url value="/plugins/images/users/varun.jpg"/>"
                                                                       class="thumb-lg img-circle" alt="img"></a>
                                     <h4 class="text-white">${taskModelList[0].getUserName()}</h4>
                                     <h5 class="text-white">${taskModelList[0].getEmail()}</h5>

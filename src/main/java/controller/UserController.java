@@ -1,5 +1,6 @@
 package controller;
 
+import com.mysql.cj.Session;
 import model.RoleModel;
 import model.StatusModel;
 import model.TaskModel;
@@ -11,10 +12,7 @@ import service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 
@@ -152,12 +150,12 @@ public class UserController extends HttpServlet {
     }
 
     private void profileUser(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException {
-        Cookie[] cookies = req.getCookies();
+        HttpSession session = req.getSession();
+
         String email = "";
-        for (Cookie item : cookies) {
-            if (item.getName().equals("email")) {
-                email = item.getValue();
-            }
+
+        if (session.getAttribute("email")!=null){
+            email = (String) session.getAttribute("email");
         }
 
         List<TaskModel> taskModelList = taskService.getTaskByEmail(email);
