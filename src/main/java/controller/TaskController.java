@@ -76,8 +76,11 @@ public class TaskController extends HttpServlet {
     }
 
     private void getAllTask(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
         List<TaskModel> taskModelList = taskService.getAllTask();
+
         req.setAttribute("taskList",taskModelList);
+        req.setAttribute("role",(String) session.getAttribute("role"));
 
         req.getRequestDispatcher("task.jsp").forward(req,resp);
     }

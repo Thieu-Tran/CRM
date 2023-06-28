@@ -17,9 +17,11 @@ public class TaskRepository {
 
         try {
             connection = MysqlConfig.getConnection();
-            String sql = "SELECT t.id, t.name as task_name,t.start_date,t.end_date,u.fullname,j.name as job_name,s.name as status_name FROM tasks t INNER JOIN users u ON t.user_id = u.id \n" +
-                    "\t\t\t\t\t  INNER JOIN jobs j ON t.job_id = j.id \n" +
-                    "\t\t\t\t\t  INNER JOIN status s ON t.status_id = s.id";
+            String sql ="SELECT t.id, t.name as task_name,t.start_date,t.end_date,u.fullname,j.name as job_name,s.name as status_name, r.name as role_name FROM tasks t " +
+                            "INNER JOIN users u ON t.user_id = u.id " +
+                            "INNER JOIN jobs j ON t.job_id = j.id " +
+                            "INNER JOIN status s ON t.status_id = s.id " +
+                            "INNER JOIN roles r ON u.role_id = r.id";
             PreparedStatement statement= connection.prepareStatement(sql);
 
             ResultSet resultSet = statement.executeQuery();
@@ -33,6 +35,7 @@ public class TaskRepository {
                 taskModel.setUserName(resultSet.getString("fullname"));
                 taskModel.setJobName(resultSet.getString("job_name"));
                 taskModel.setStatusName(resultSet.getString("status_name"));
+                taskModel.setRoleName(resultSet.getString("role_name"));
 
                 taskModelList.add(taskModel);
             }

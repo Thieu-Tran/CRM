@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.Objects;
 
 @WebFilter(urlPatterns = {"/*"})
 public class CustomFilter implements Filter {
@@ -29,9 +28,6 @@ public class CustomFilter implements Filter {
             role = (String) session.getAttribute("role");
         }
 
-        System.out.println("role: " + role);
-        System.out.println("email"+email);
-
         //Trang login và 403 khi call sẽ được thông qua, tránh trường hợp lặp vô tận.
         if (servletPath.endsWith("/login")||servletPath.endsWith("/403")){
             filterChain.doFilter(servletRequest,servletResponse);
@@ -47,8 +43,12 @@ public class CustomFilter implements Filter {
                         filterChain.doFilter(servletRequest,servletResponse);
                         break;
                     }
-                    case "ROLE_LEADER":{
-
+                    case "ROLE_MANAGER":{
+                        if (servletPath.endsWith("/role")||servletPath.endsWith("/jobs")){
+                            response.sendRedirect(contextPath+"/403");
+                        }else {
+                            filterChain.doFilter(servletRequest,servletResponse);
+                        }
                         break;
                     }
                     case "ROLE_USER":{
@@ -62,10 +62,7 @@ public class CustomFilter implements Filter {
                     }
 
                 }
-
             }
         }
-
-
     }
 }

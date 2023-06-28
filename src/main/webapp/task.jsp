@@ -115,7 +115,7 @@
                                                                  aria-hidden="true"></i><span class="hide-menu">Blank Page</span></a>
                 </li>
                 <li>
-                    <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw"
+                    <a href="<c:url value="/403"/>" class="waves-effect"><i class="fa fa-info-circle fa-fw"
                                                                aria-hidden="true"></i><span class="hide-menu">Error 404</span></a>
                 </li>
             </ul>
@@ -154,22 +154,48 @@
                                 </thead>
                                 <tbody>
 
-                                <c:forEach var="item" items="${taskList}">
-                                    <tr>
-                                        <td>${item.getId()}</td>
-                                        <td>${item.getName()}</td>
-                                        <td>${item.getJobName()}</td>
-                                        <td>${item.getUserName()}</td>
-                                        <td>${item.getStartDate()}</td>
-                                        <td>${item.getEndDate()}</td>
-                                        <td>${item.getStatusName()}</td>
-                                        <td>
-                                            <a href="<c:url value="/task/edit?id=${item.getId()}"/>" class="btn btn-sm btn-primary">Sửa</a>
-                                            <span taskid="${item.getId()}" class="btn btn-sm btn-danger btn-delete-task">Xóa</span>
-                                            <a href="#" class="btn btn-sm btn-info">Xem</a>
-                                        </td>
-                                    </tr>
-                                </c:forEach>
+                                <!-- Nếu user có quyền ROLE_MANAGER thì chỉ cho phép xem những dự án mà người đó tham gia(role ROLE_USER mặc định không có quyền xem danh sách) -->
+                                <c:if test="${role=='ROLE_MANAGER'}">
+                                    <c:forEach var="item" items="${taskList}">
+                                        <c:if test="${item.getRoleName()==role}">
+                                            <tr>
+                                                <td>${item.getId()}</td>
+                                                <td>${item.getName()}</td>
+                                                <td>${item.getJobName()}</td>
+                                                <td>${item.getUserName()}</td>
+                                                <td>${item.getStartDate()}</td>
+                                                <td>${item.getEndDate()}</td>
+                                                <td>${item.getStatusName()}</td>
+                                                <td>
+                                                    <a href="<c:url value="/task/edit?id=${item.getId()}"/>" class="btn btn-sm btn-primary">Sửa</a>
+                                                    <span taskid="${item.getId()}" class="btn btn-sm btn-danger btn-delete-task">Xóa</span>
+                                                    <a href="#" class="btn btn-sm btn-info">Xem</a>
+                                                </td>
+                                            </tr>
+
+                                        </c:if>
+                                    </c:forEach>
+                                </c:if>
+
+                                <!-- Nếu role khác ROLE_MANAGER thì in toàn bộ dự án -->
+                                <c:if test="${role!='ROLE_MANAGER'}">
+                                    <c:forEach var="item" items="${taskList}">
+                                            <tr>
+                                                <td>${item.getId()}</td>
+                                                <td>${item.getName()}</td>
+                                                <td>${item.getJobName()}</td>
+                                                <td>${item.getUserName()}</td>
+                                                <td>${item.getStartDate()}</td>
+                                                <td>${item.getEndDate()}</td>
+                                                <td>${item.getStatusName()}</td>
+                                                <td>
+                                                    <a href="<c:url value="/task/edit?id=${item.getId()}"/>" class="btn btn-sm btn-primary">Sửa</a>
+                                                    <span taskid="${item.getId()}" class="btn btn-sm btn-danger btn-delete-task">Xóa</span>
+                                                    <a href="#" class="btn btn-sm btn-info">Xem</a>
+                                                </td>
+                                            </tr>
+                                    </c:forEach>
+                                </c:if>
 
                                 </tbody>
                             </table>

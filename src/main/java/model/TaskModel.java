@@ -14,6 +14,7 @@ public class TaskModel {
     private String jobName;
     private String statusName;
     private String email;
+    private String roleName;
 
     public int getId() {
         return id;
@@ -101,5 +102,13 @@ public class TaskModel {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 }

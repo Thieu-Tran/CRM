@@ -52,7 +52,7 @@
                         <input type="password" class="form-control" name="password" value="${password}">
                     </div>
                     <div class="form-group text-left">
-                        <input type="checkbox" name="remember">
+                        <input type="checkbox" name="remember" checked>
                         <label>Remember</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Đăng nhập</button>
