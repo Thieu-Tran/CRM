@@ -5,7 +5,7 @@ $(document).ready(function (){
 
         $.ajax({
             method: "GET",
-            url: "http://localhost:8080/demoservlet/role/delete?id="+id,
+            url: "http://localhost:8080/CRM/role/delete?id="+id,
             // data: { name: "John", location: "Boston" }
         }).done(function( result ) {
             This.closest("tr").remove();

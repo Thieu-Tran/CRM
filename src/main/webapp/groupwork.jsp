@@ -191,7 +191,7 @@
 <script src="js/waves.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="js/custom.min.js"></script>
-<script src="js/groupwork-delete.js"></script>
+<script src="<c:url value="/js/groupwork-delete.js?version=1"/>"></script>
 <script>
     $(document).ready(function () {
         $('#example').DataTable();

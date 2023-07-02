@@ -188,7 +188,7 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/custom.min.js"></script>
 
-<script src="js/role-table.js"></script>
+<script src="<c:url value="/js/role-table.js?version=1"/>"></script>
 <script>
     $(document).ready(function () {
         $('#example').DataTable();

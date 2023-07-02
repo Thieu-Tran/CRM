@@ -47,7 +47,7 @@
             <div class="top-left-part">
                 <a class="logo" href="<c:url value="/"/>">
                     <b>
-                        <img src="<c:url value="/plugins/images/pixeladmin-logo.png"/>" alt="home" />
+                            <img src="<c:url value="/plugins/images/pixeladmin-logo.png"/>" alt="home" />
                     </b>
                     <span class="hidden-xs">
                                 <img src="<c:url value="/plugins/images/pixeladmin-text.png"/>" alt="home" />
@@ -192,7 +192,7 @@
 <script src="js/waves.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="js/custom.min.js"></script>
-<script src="<c:url value="/js/user-table.js?version=1"/>"></script>
+<script src="<c:url value="/js/user-table.js"/>"></script>
 <script>
     $(document).ready(function () {
         $('#example').DataTable();

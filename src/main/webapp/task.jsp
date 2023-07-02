@@ -224,7 +224,7 @@
 <script src="js/waves.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="js/custom.min.js"></script>
-<script src="js/task.js"></script>
+<script src="<c:url value="/js/task.js?version=1"/>"></script>
 <script>
     $(document).ready(function () {
         $('#example').DataTable();
